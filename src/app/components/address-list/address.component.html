@@ -1,0 +1,15 @@
+<h1>List Address</h1>
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name Address</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let ad of  address; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{ad.name}}</td>
+    <td><a [routerLink]="['/address/edit/',ad.id]">Edit</a></td>
+    <td><a [routerLink]="['/address/delete/',ad.id]">Delete</a></td>
+  </tr>
+</table>
